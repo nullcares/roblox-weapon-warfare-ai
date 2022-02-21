@@ -1,4 +1,4 @@
--- // Written by: 
+-- // Written by: @
 -- // Info: 
 -- // Creation date: 02/21/22
 
@@ -131,7 +131,7 @@ local function grab_wep()
     c:MoveTo(save)
     task.wait(0.5)
     
-    h:EquipTool(lp.Backpack:FindFirstChild(g.Name))
+    h:EquipTool(lp.Backpack:WaitForChild(con.weapon))
 end
 
 task.spawn(function()
@@ -146,6 +146,13 @@ task.spawn(function()
         task.wait()
     end
 end)
+
+--[[
+lp.Backpack.ChildAdded:Connect(function(c)
+	if lp.Character and c:IsA('Tool') and c.Name == con.weapon then
+		lp.Character.Humanoid:EquipTool(c)
+	end
+end)]]
 
 lp.CharacterAdded:Connect(function(c)
 	task.wait()
