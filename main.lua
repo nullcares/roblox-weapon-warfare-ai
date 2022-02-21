@@ -129,7 +129,7 @@ local function grab_wep()
     local Event = game:GetService("ReplicatedStorage").Remotes.GrabItem
     Event:FireServer(A_1, A_2, A_3)
     c:MoveTo(save)
-    task.wait(0.5)
+    task.wait()
     
     h:EquipTool(lp.Backpack:WaitForChild(con.weapon))
 end
