@@ -1,4 +1,4 @@
--- // Written by: @ItsMarkStyles
+-- // Written by: 
 -- // Info: 
 -- // Creation date: 02/21/22
 
