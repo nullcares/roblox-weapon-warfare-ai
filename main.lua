@@ -10,9 +10,9 @@ local target = nil
 
 local con = getgenv()
 con.enabled = true
-con.aimpart = 'Torso'
-con.aimbotsharpness = 0.25
-con.randompart = true
+con.aimpart = 'Head'
+con.aimbotsharpness = 0.5
+--con.randompart = true
 con.weapon = 'G-17'
 con.team_check = false
 con.ff_filter = true
